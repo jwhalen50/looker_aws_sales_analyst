@@ -77,4 +77,9 @@ view: aws_sales_analyst_view {
     type: sum
     sql: ${sales} ;;
   }
+  measure: customer_count {
+    description: "Customer Count by Territory, Rep and Customer"
+    type: count_distinct
+    sql: ${customername} ;;
+  }
 }
